@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Countdown 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Countdown to My Sister’s Birthday 🎉</h1>
+    <h2 id="timer">00d : 00h : 00m : 00s</h2>
+    <p class="small">A few seconds to go... wait for the surprise! 💖</p>
+  </div>
+
+  <script>
+    // 🎂 Set your sister's birthday date here
+    const birthday = new Date("Nov 4, 2025 00:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = 
+        `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+
+      // When countdown finishes
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "🎉 It's her Birthday! 🎂";
+        setTimeout(() => {
+          window.location.href = "birthday.html"; // redirect to next page
+        }, 2000);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
