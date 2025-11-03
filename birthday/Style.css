@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.5s ease;
+  width: 80%;
+  max-width: 500px;
+}
+
+h1 {
+  color: #ff4081;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+#timer {
+  font-size: 2em;
+  color: #ff4081;
+  margin-top: 10px;
+}
+
+.small {
+  font-size: 1em;
+  color: #555;
+}
+
+.photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 20px 0;
+  object-fit: cover;
+  border: 5px solid #ff79a9;
+  animation: float 3s ease-in-out infinite;
+}
+
+.quotes p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #444;
+}
+
+.wish-btn {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wish-btn:hover {
+  background: #ff79a9;
+  transform: scale(1.1);
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.9em;
+  color: #222;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}

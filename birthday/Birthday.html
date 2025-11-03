@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sister 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+  <img src="photo.jpg.jpeg" alt="Sister Photo" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f9c5d1, #ffe0ac);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff4081;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px 0;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .quote {
+      font-size: 16px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .surprise-btn {
+      background-color: #ff4081;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #777;
+      position: relative;
+      top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="card">
+    <h1>🎉 Happy Birthday, My Dear Sister! 💖</h1>
+    <p>Wishing you a day filled with laughter, love, and beautiful moments.</p>
+    <img src="sister.jpg" alt="Sister Photo" />
+
+    <p class="quote">🌈 “Count your life by smiles, not tears. Count your age by friends, not years.”</p>
+    <p class="quote">💫 “May your birthday be as bright and wonderful as your smile!”</p>
+
+    <button class="surprise-btn" onclick="alert('🎁 Surprise Message: You are the best sister ever! Love you 💕')">
+      Click for Surprise 🎀
+    </button>
+
+    <p class="footer">Made with 💕 by Bhavi 😘</p>
+  </div>
+
+  <script>
+    // To make sure the music plays even if browser blocks autoplay
+    const bgMusic = document.getElementById("bgMusic");
+    document.body.addEventListener("click", () => {
+      bgMusic.play().catch(() => {});
+    });
+  </script>
+</body>
+</html>
